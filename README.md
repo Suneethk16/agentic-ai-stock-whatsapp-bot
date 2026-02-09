@@ -1,21 +1,89 @@
-# Agentic AI Stock Analysis Bot 📈🤖
+# 🤖📈 Agentic AI Stock Analysis Bot (LLM-Powered)
 
-An autonomous agentic AI system that:
-- Fetches stock market news and historical data
-- Performs sentiment analysis and trend analysis
-- Generates daily stock insights
-- Sends reports automatically to WhatsApp
-- Runs fully autonomously using Docker + Cron
+An **autonomous Agentic AI system** that analyzes stock market data daily and delivers **WhatsApp-ready insights at 9:00 AM**, without any human prompts.
 
-## Tech Stack
-- Python
-- Docker
-- Twilio WhatsApp API
-- Alpha Vantage
+The system combines **rule-based agents** with an **LLM-powered reasoning agent (Google Gemini)** and runs in a **Docker + cron** setup for full automation and cloud portability.
+
+---
+
+## Key Features
+
+- **Fully Autonomous** – runs daily via cron (no manual prompts)
+- **Agentic Architecture** – multiple specialized agents working together
+- **LLM-Powered Reasoning** – uses **Google Gemini** for natural-language insights
+- **Graceful Fallback** – switches to rule-based logic if LLM is unavailable
+- **Market Intelligence**
+  - Stock price trend analysis (7 / 30 / 90 days)
+  - News sentiment analysis
+- 📲 **WhatsApp Delivery** – sends concise daily summaries
+- 🐳 **Dockerized** – reproducible, cloud-safe deployment
+
+---
+
+## Agent Architecture
+Scheduler (Cron)
+↓
+DataAgent → Fetches stock prices & news
+↓
+SentimentAgent → Analyzes market news sentiment
+↓
+TrendAgent → Computes short / mid / long-term trends
+↓
+GeminiReasoningAgent (LLM)
+↓
+WhatsAppAgent → Sends daily insight to WhatsApp
+
+
+---
+
+##  Tech Stack
+
+- Python 3.11
+- Google Gemini API (LLM reasoning)
+- Alpha Vantage (stock news & sentiment)
+- yFinance (historical price data)
 - VADER Sentiment Analysis
+- Twilio WhatsApp API
+- Docker
+- Cron
 
-## How It Works
-Cron → Docker → Multi-Agent Pipeline → WhatsApp
+
+---
+
+## Learning Outcomes
+
+- Designed a true **agentic AI system**
+- Integrated **LLM reasoning** into autonomous workflows
+- Built **fault-tolerant AI pipelines**
+- Deployed using **Docker + cron**
+- Delivered real-world value via WhatsApp automation
+
+---
 
 ## Disclaimer
-This project is for educational purposes only and not financial advice.
+
+This project is for **educational purposes only**.  
+It does **not** constitute financial or investment advice.
+
+---
+
+## Future Enhancements
+
+- Multi-stock portfolio summaries
+- Confidence scoring
+- SQLite / PostgreSQL storage
+- Open-source LLM (Ollama + LLaMA)
+- Cloud deployment (AWS / Railway)
+- Web dashboard (FastAPI + React)
+
+---
+
+## Author
+
+**Suneeth Kokala**  
+Built with curiosity, discipline and real-world engineering principles.
+
+
+
+
+
