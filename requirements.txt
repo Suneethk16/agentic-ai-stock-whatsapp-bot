@@ -5,3 +5,4 @@ python-dotenv
 vaderSentiment
 feedparser
 twilio
+google-generativeai

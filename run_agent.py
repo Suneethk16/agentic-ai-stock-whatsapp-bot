@@ -3,13 +3,16 @@ from agents.sentiment_agent import SentimentAgent
 from agents.trend_agent import TrendAgent
 from agents.reasoning_agent import ReasoningAgent
 from agents.whatsapp_agent import WhatsAppAgent
+from agents.gemini_reasoning_agent import GeminiReasoningAgent
+
+
 import os
 
 if __name__ == "__main__":
     data_agent = DataAgent()
     sentiment_agent = SentimentAgent()
     trend_agent = TrendAgent()
-    reasoning_agent = ReasoningAgent()
+    gemini_agent = GeminiReasoningAgent()
     whatsapp_agent = WhatsAppAgent()
 
     # 1️⃣ Fetch data
@@ -24,11 +27,11 @@ if __name__ == "__main__":
     trend_results = trend_agent.run(hist_data)
 
     # 3️⃣ Reasoning
-    final_message = reasoning_agent.run(
-        os.getenv("STOCK_SYMBOL"),
-        sentiment_results,
-        overall_sentiment,
-        trend_results
+    final_message = gemini_agent.run(
+        stock=os.getenv("STOCK_SYMBOL"),
+        sentiment=overall_sentiment,
+        trends=trend_results,
+        news=news_data
     )
 
     print("\n📩 FINAL AGENT OUTPUT (WhatsApp-ready):\n")
