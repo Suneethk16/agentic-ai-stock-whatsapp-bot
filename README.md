@@ -1,4 +1,4 @@
-# 🤖📈 Agentic AI Stock Analysis Bot (LLM-Powered)
+#  Agentic AI Stock Analysis Bot (LLM-Powered)
 
 An **autonomous Agentic AI system** that analyzes stock market data daily and delivers **WhatsApp-ready insights at 9:00 AM**, without any human prompts.
 
