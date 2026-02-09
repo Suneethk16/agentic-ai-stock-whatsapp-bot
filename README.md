@@ -23,15 +23,15 @@ The system combines **rule-based agents** with an **LLM-powered reasoning agent 
 ## Agent Architecture
 Scheduler (Cron)
 ↓
-DataAgent → Fetches stock prices & news
+DataAgent → Fetches stock prices & news<br>
 ↓
-SentimentAgent → Analyzes market news sentiment
+SentimentAgent → Analyzes market news sentiment<br>
 ↓
-TrendAgent → Computes short / mid / long-term trends
+TrendAgent → Computes short / mid / long-term trends<br>
 ↓
-GeminiReasoningAgent (LLM)
+GeminiReasoningAgent (LLM)<br>
 ↓
-WhatsAppAgent → Sends daily insight to WhatsApp
+WhatsAppAgent → Sends daily insight to WhatsApp<br>
 
 
 ---
